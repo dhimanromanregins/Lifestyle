@@ -6,12 +6,10 @@ const SplashScreen = () => {
   const navigation = useNavigation();
   const [isLoading, setLoading] = useState(true);
 
-  // Create animated values for fade and scale
   const fadeAnim = new Animated.Value(0); 
-  const scaleAnim = new Animated.Value(0.5); // Initial scale
+  const scaleAnim = new Animated.Value(0.5);
 
   useEffect(() => {
-    // Fade and scale animation
     Animated.parallel([
       Animated.timing(fadeAnim, {
         toValue: 1,
@@ -19,14 +17,14 @@ const SplashScreen = () => {
         useNativeDriver: true,
       }),
       Animated.timing(scaleAnim, {
-        toValue: 1,  // Full scale
+        toValue: 1,
         duration: 2000,
         useNativeDriver: true,
       }),
     ]).start();
 
     setTimeout(() => {
-      navigation.replace('AuthDashboardScreen'); 
+      navigation.replace('AuthDashboard'); 
     }, 3000); 
   }, [fadeAnim, scaleAnim, navigation]);
 
