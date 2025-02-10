@@ -12,7 +12,7 @@ const RegisterPhase2 = ({ navigation }) => {
             <Text style={styles.title}>Set up profile for</Text>
 
             <View style={styles.optionsContainer}>
-                <TouchableOpacity style={styles.option} onPress={() => navigation.navigate('ChildProfile')}>
+                <TouchableOpacity style={styles.option} onPress={() => navigation.navigate('RegisterPhase3')}>
                     <View style={styles.circle}>
                         <Image source={require('../../../../assets/images/imgchild.png')} style={styles.icon} />
                     </View>
@@ -21,7 +21,7 @@ const RegisterPhase2 = ({ navigation }) => {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.option} onPress={() => navigation.navigate('FamilyProfile')}>
+                <TouchableOpacity style={styles.option} onPress={() => navigation.navigate('RegisterPhase3')}>
                     <View style={styles.circle}>
                         <Image source={require('../../../../assets/images/imgfamily.png')} style={styles.icon} />
                     </View>
@@ -101,8 +101,7 @@ const styles = StyleSheet.create({
     optionText: {
         fontSize: 16,
         fontWeight: 'bold',
-        color: '#333',
-        
+        color: '#fff',    
     },
     cloud: {
         position: 'absolute',

@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity, ImageBackgr
 import Icon from 'react-native-vector-icons/Feather';
 
 const RegisterPhase1 = ({ navigation }) => {
-
+const [keyboardVisible, setKeyboardVisible] = useState(false);
     useEffect(() => {
         const keyboardDidShowListener = Keyboard.addListener(
             'keyboardDidShow',
@@ -57,10 +57,11 @@ const RegisterPhase1 = ({ navigation }) => {
                 <Text style={styles.text2}>empowers you in building  Enhanced Life Skills for your child at home {'\n'}through curated games and contents, and {'\n'}hand's on activities.</Text>
             </View>
 
-            <TouchableOpacity style={styles.loginButton} onPress={handleSubmit}>
-            <Text style={styles.loginText}>
-    Next <Icon name="arrow-right" size={20} color="#fff" />
-  </Text>
+             <TouchableOpacity style={styles.loginButton} onPress={handleSubmit}>
+                                    <Text style={styles.loginText}>
+                            Next <Icon name="arrow-right" size={20} color="#fff" />
+                          </Text>
+                      
                       </TouchableOpacity>
         </ImageBackground>
     );
